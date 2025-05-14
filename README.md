@@ -2,31 +2,6 @@
 
 import streamlit as st
 
-st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url("https://images.unsplash.com/photo-1577436932028-2d18814ef666?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=emrecan-arik-h1_R9-o9an0-unsplash.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: white;
-        font-weight: bold;
-    }
-    .animated-title {
-        font-size: 32px;
-        font-weight: bold;
-        color: #fff;
-        animation: fadein 2s ease-in-out;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    @keyframes fadein {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-    }
-    </style>
-""", unsafe_allow_html=True)
 def hitung_kebutuhan_kalori(umur, tb, bb, jenis_kelamin, aktivitas):
     if jenis_kelamin == "Pria":
         bmr = 66 + (13.7 * bb) + (5 * tb) - (6.8 * umur)
@@ -72,13 +47,13 @@ def tampilkan_pengenalan_kelompok():
     """)
 
 def main():
-    # Styling for whole app + kalkulator black background
+    # Styling for whole app + kalkulator white background
     st.markdown("""
         <style>
         /* Background putih dan teks hitam untuk seluruh aplikasi */
         .reportview-container, .main, .sidebar .sidebar-content {
             background-color: #1E3A8A;
-            color: black;
+            color: white;
         }
 
         /* Header dan teks umum putih */
@@ -86,7 +61,7 @@ def main():
             color: white !important;
         }
 
-        /* Kalkulator section: hitam dengan teks putih */
+        /* Kalkulator section: putih dengan teks hitam*/
         .kalkulator-container {
             background-color: #000000;  /* Hitam */
             color: white;
