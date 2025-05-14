@@ -1,5 +1,3 @@
-# kalku-kel12-gula
-
 import streamlit as st
 
 def hitung_kebutuhan_kalori(umur, tb, bb, jenis_kelamin, aktivitas):
@@ -22,8 +20,6 @@ def tampilkan_tentang_aplikasi():
     st.write("""
     Aplikasi ini membantu menghitung kebutuhan kalori dan konsumsi gula ideal berdasarkan
     data pribadi dan tingkat aktivitas harian. Cocok untuk kamu yang ingin hidup lebih sehat! 🍏💪
-    Meningkatkan Kesadaran Gizi dan Pola Makan SehatBanyak orang belum menyadari berapa banyak gula yang mereka konsumsi setiap hari.
-    Aplikasi ini membantu pengguna memahami batas konsumsi gula maksimal dan ideal berdasarkan kondisi tubuh dan aktivitas mereka.
     """)
 
 def tampilkan_pengenalan_kelompok():
@@ -31,52 +27,58 @@ def tampilkan_pengenalan_kelompok():
     st.write("""
     Aplikasi ini dikembangkan oleh kelompok 12:
 
-    - Allyshia Rahma Putri: 2420570  💻
-    - I Gede Hilmi Krisna Hadinata: 2420604 🎨
-    - Khaesa Shafa Nuraini: 2420608 📝
-    - Pramudya Bayu Perkasa: 2420640  🩵
-    - Rahmawati Syafitri: 2420645 💻
-    - Allyshia Rahma Putri: 2420570  🐈
-    - I Gede Hilmi Krisna Hadinata: 2420604 🐔
-    - Khaesa Shafa Nuraini: 2420608 🐼
-    - Pramudya Bayu Perkasa: 2420640  🐆
-    - Rahmawati Syafitri: 2420645 🦓
+    - Allyshia Rahma Putri: 2420570 💻🐈
+    - I Gede Hilmi Krisna Hadinata: 2420604 🎨🐔
+    - Khaesa Shafa Nuraini: 2420608 📝🐼
+    - Pramudya Bayu Perkasa: 2420640 🩵🐆
+    - Rahmawati Syafitri: 2420645 💻🦓
 
-    
-   Kelompok Kami hadir untuk membantu kamu lebih peduli terhadap pola makan! 😄
+    Kelompok kami hadir untuk membantu kamu lebih peduli terhadap pola makan! 😄
     """)
 
 def main():
-    # Styling for whole app + kalkulator white background
+    st.set_page_config(page_title="Kalkulator Gula Harian", layout="centered")
     st.markdown("""
         <style>
-        /* Background putih dan teks hitam untuk seluruh aplikasi */
-        .reportview-container, .main, .sidebar .sidebar-content {
-            background-color: #1E3A8A;
-            color: white;
+        .stApp {
+            background-image: url("https://images.unsplash.com/photo-1634612831148-03a8550e1d52?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        /* Header dan teks umum putih */
+        .stApp::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);  /* Lapisan gelap */
+            z-index: -1;
+        }
+
         h1, h2, h3, h4, h5, h6, p, label, .css-1cpxqw2, .css-qrbaxs {
-            color: white !important;
+            color: black !important;
         }
 
-        /* Kalkulator section: putih dengan teks hitam*/
         .kalkulator-container {
-            background-color: #000000;  /* Hitam */
-            color: white;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: black;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
         }
 
-        /* Ubah input label dan tulisan dalam kalkulator */
         .kalkulator-container label, .kalkulator-container span, .kalkulator-container p {
-            color: white !important;
+            color: black !important;
         }
         </style>
     """, unsafe_allow_html=True)
 
+   
+          
+    
     st.title("Kalkulator Kebutuhan Gula Harian 🍭")
 
     menu = st.sidebar.radio("Pilih Menu 🤔", ["Kalkulator Kebutuhan Kalori 🧮", "Tentang Aplikasi 🌞", "Pengenalan Kelompok 👩‍💻👨‍💻"])
@@ -114,3 +116,9 @@ def main():
 
 if _name_ == "_main_":
     main()
+
+        
+
+    
+
+    
