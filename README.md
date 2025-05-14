@@ -2,8 +2,31 @@
 
 import streamlit as st
 
-https://www.freepik.com/free-photo/world-diabetes-day-sugar-wooden-bowl-dark-surface_10401423.htm#fromView=search&page=1&position=0&uuid=9560b611-7013-4137-bd4d-6bee811e2d5d&query=sugar
-
+st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url("https://images.unsplash.com/photo-1577436932028-2d18814ef666?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=emrecan-arik-h1_R9-o9an0-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        font-weight: bold;
+    }
+    .animated-title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #fff;
+        animation: fadein 2s ease-in-out;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    @keyframes fadein {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    </style>
+""", unsafe_allow_html=True)
 def hitung_kebutuhan_kalori(umur, tb, bb, jenis_kelamin, aktivitas):
     if jenis_kelamin == "Pria":
         bmr = 66 + (13.7 * bb) + (5 * tb) - (6.8 * umur)
